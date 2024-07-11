@@ -137,12 +137,12 @@ static const char *menucmd[] = { "bemenu-run", NULL };
 static const Key keys[] = {
 	/* Note that Shift changes certain key codes: c -> C, 2 -> at, etc. */
 	/* modifier                  key                 function        argument */
-//    { MODKEY,                    XKB_KEY_s,          spawn,          SHCMD("xscreensaver-command -lock") },
+    { MODKEY,                    XKB_KEY_s,          spawn,          SHCMD("waylock") },
     { MODKEY,                    XKB_KEY_Up,         spawn,          SHCMD("volume-up") },
 	{ MODKEY,                    XKB_KEY_Down,       spawn,          SHCMD("volume-down") },
     { MODKEY,                    XKB_KEY_Right,      spawn,          SHCMD("brightness-up") },
 	{ MODKEY,                    XKB_KEY_Left,       spawn,          SHCMD("brightness-down") },
-//	{ MODKEY,                    XKB_KEY_r,          spawn,          SHCMD("enable-main-display") },
+	{ MODKEY,                    XKB_KEY_r,          spawn,          SHCMD("wlr-randr --output eDP-1 --on --pos 0,0 --output DP-4 --off --output DP-3 --off") },
 	{ MODKEY,                    XKB_KEY_y,          spawn,          SHCMD("ytfzf -D") },
 	{ MODKEY,                    XKB_KEY_o,          spawn,          SHCMD("ytfzf -cO -D") },
 	{ MODKEY,                    XKB_KEY_p,          spawn,          {.v = menucmd} },
